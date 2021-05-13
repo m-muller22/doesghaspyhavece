@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>does ghaspy have cutting edge</title>
+    </head>
+    <body>
+        <script > 
+            fetch('https://raider.io/api/v1/characters/profile?region=us&realm=Tichondrius&name=Ghaspy&fields=raid_progression')
+                .then(response => response.json())
+                .then(data => {
+                if (data['raid_progression']['castle-nathria']['mythic_bosses_killed'] == 10)
+                {
+                    console.log('he has')
+                    var HE_HAS1 = document.getElementById("01")
+                    var HE_HAS2 = document.getElementById("02")
+                    var HE_HAS3 = document.getElementById("03")
+                    var HE_HAS4 = document.getElementById("04")
+                    HE_HAS1.style.display = "none"
+                    HE_HAS2.style.display = "none"
+                    HE_HAS3.style.display = "block"
+                    HE_HAS4.style.display = "block"
+                }
+                else
+                {
+                    console.log('he hasnt')
+                    var HE_HAS1 = document.getElementById("01")
+                    var HE_HAS2 = document.getElementById("02")
+                    var HE_HAS3 = document.getElementById("03")
+                    var HE_HAS4 = document.getElementById("04")
+                    HE_HAS1.style.display = "block"
+                    HE_HAS2.style.display = "block"
+                    HE_HAS3.style.display = "none"
+                    HE_HAS4.style.display = "none"
+                }
+                console.log(data['raid_progression']['castle-nathria']['mythic_bosses_killed'])});
+        </script>
+        <h1 id="01", style="display:none">  NO </p> </h1>
+        <h2 id="02", style="display:none"> <img src="https://media1.tenor.com/images/aab1a103aaef34e19d7bc81cd57b7b2f/tenor.gif"> </h2>
+        <h1 id="03", style="display:none">  WHO ASKED? </p> </h1>
+        <h2 id="04", style="display:none"> <img src="https://media1.tenor.com/images/26ded27129c3932120b6915c29b0c9ce/tenor.gif"> </h2>
+    </body>
+</html>
